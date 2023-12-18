@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://imus1lp6s284"]
+[gd_scene load_steps=7 format=3 uid="uid://imus1lp6s284"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_82ydj"]
 [ext_resource type="Texture2D" uid="uid://1r7r4dmhj60p" path="res://Assets/UI/PH_Grassy_Mountains.png" id="1_bf0be"]
+[ext_resource type="Texture2D" uid="uid://ku4ov5d4ng2i" path="res://Assets/UI/Jammio icon.png" id="3_dr4yb"]
 
 [sub_resource type="SystemFont" id="SystemFont_g6c5v"]
 font_names = PackedStringArray("Onyx")
@@ -116,6 +117,26 @@ text = "Exit Game"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 visible = false
+
+[node name="JammioLogo" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -120.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="TextureRect" type="TextureRect" parent="JammioLogo"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture = ExtResource("3_dr4yb")
+expand_mode = 1
 
 [connection signal="pressed" from="MarginContainer/MenuButtonContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/MenuButtonContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
