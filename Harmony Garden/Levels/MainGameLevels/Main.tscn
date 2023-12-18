@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://cuc1rraafary2"]
 
 [node name="Main" type="Node3D"]
+
+[node name="Terrain" type="Node" parent="."]
+
+[node name="Characters & NPC\'s" type="Node" parent="."]
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="Lighting" type="Node" parent="."]
